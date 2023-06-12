@@ -1,7 +1,8 @@
 // Copyright (c) 2011 Yuichi Katori All Rights Reserved
 // Author: Yuichi Katori (yuichi.katori@gmail.com)
-using namespace std;
-#include "matplotpp.h"
+
+#include "../matplotpp.h"
+
 class MP : public MatPlot {
     void DISPLAY()
     {
@@ -13,8 +14,10 @@ class MP : public MatPlot {
         plot(x, y);
     }
 } mp;
+
 void display() { mp.display(); }
 void reshape(int w, int h) { mp.reshape(w, h); }
+
 int main(int argc, char *argv[])
 {
     glutInit(&argc, argv);

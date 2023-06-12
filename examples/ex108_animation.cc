@@ -1,8 +1,6 @@
 // Copyright (c) 2011 Yuichi Katori (yuichi.katori@gmail.com) All Rights Reserve
 #include <unistd.h>
-#include <iostream>
-using namespace std;
-#include "matplotpp.h"
+#include "../matplotpp.h"
 
 int is_run = 1;
 double t = 0; // time
@@ -41,7 +39,6 @@ class MP : public MatPlot {
 } mp;
 
 void display() { mp.display(); }
-
 void reshape(int w, int h) { mp.reshape(w, h); }
 
 void idle(void)
@@ -60,7 +57,6 @@ void mouse(int button, int state, int x, int y)
 }
 
 void motion(int x, int y) { mp.motion(x, y); }
-
 void passive(int x, int y) { mp.passivemotion(x, y); }
 
 void keyboard(unsigned char key, int x, int y)

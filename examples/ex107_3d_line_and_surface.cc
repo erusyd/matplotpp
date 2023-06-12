@@ -1,11 +1,10 @@
 // Copyright (c) 2011 Yuichi Katori (yuichi.katori@gmail.com) All Rights Reserve
 #include <unistd.h>
-using namespace std;
-#include "matplotpp.h"
+#include "../matplotpp.h"
+
 class MP : public MatPlot {
     void DISPLAY()
     {
-
         // Prepare test data
         int n = 50;
         vector<double> x, y, z;
@@ -49,20 +48,25 @@ class MP : public MatPlot {
         colorbar();
     }
 } mp;
+
 void display() { mp.display(); }
 void reshape(int w, int h) { mp.reshape(w, h); }
+
 void idle(void)
 {
     glutPostRedisplay();
     usleep(10000);
 }
+
 void mouse(int button, int state, int x, int y)
 {
     mp.mouse(button, state, x, y);
 }
+
 void motion(int x, int y) { mp.motion(x, y); }
 void passive(int x, int y) { mp.passivemotion(x, y); }
 void keyboard(unsigned char key, int x, int y) { mp.keyboard(key, x, y); }
+
 int main(int argc, char *argv[])
 {
     glutInit(&argc, argv);
