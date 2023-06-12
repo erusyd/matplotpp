@@ -1,4 +1,5 @@
 //Copyright (c) 2011 Yuichi Katori (yuichi.katori@gmail.com) All Rights Reserved
+#include <unistd.h>
 using namespace std;
 #include "matplotpp.h"
 class MP :public MatPlot{ 
