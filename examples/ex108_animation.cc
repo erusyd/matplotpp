@@ -2,7 +2,7 @@
 #include <unistd.h>
 #include <iostream>
 using namespace std;
-#include "matplotpp/matplotpp.h"
+#include "matplotpp.h"
 
 int is_run = 1;
 double t = 0; // time
