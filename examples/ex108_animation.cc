@@ -1,6 +1,8 @@
 // Copyright (c) 2011 Yuichi Katori (yuichi.katori@gmail.com) All Rights Reserve
-#include <unistd.h>
 #include "../matplotpp.h"
+#include <unistd.h>
+
+using namespace std;
 
 int is_run = 1;
 double t = 0; // time

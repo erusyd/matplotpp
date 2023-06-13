@@ -2,6 +2,8 @@
 // Author: Yuichi Katori (yuichi.katori@gmail.com)
 #include "../matplotpp.h"
 
+using namespace std;
+
 class MP : public MatPlot {
     void DISPLAY()
     {

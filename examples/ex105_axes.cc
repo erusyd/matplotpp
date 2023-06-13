@@ -1,7 +1,9 @@
 // Copyright (c) 2011 Yuichi Katori (yuichi.katori@gmail.com) All Rights
 // Reserved
-#include <unistd.h>
 #include "../matplotpp.h"
+#include <unistd.h>
+
+using namespace std;
 
 class MP : public MatPlot {
     void DISPLAY()
