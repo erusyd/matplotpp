@@ -5,8 +5,8 @@ Author: Yuichi Katori (yuichi.katori@gmail.com)
 Project:MATPLOT++ (MATLAB-like plotting tool in C++).
 Version:0.3.15
 ****************************************************************************/
+using namespace std;
 #include "matplotpp.h"
-#include "gl2ps.h"
 
 /// Figure
 void Figure::add_child(int i) { Children.push_back(i); }

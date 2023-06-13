@@ -13,8 +13,7 @@ Version:0.3.15
 #include <time.h>
 #include <valarray>
 #include <vector>
-
-using namespace std;
+#include "gl2ps.h"
 
 #define PI 3.14159265358979323846264
 
