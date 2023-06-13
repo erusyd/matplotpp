@@ -172,7 +172,6 @@ MatPlot::MatPlot()
 {
     is_debug1 = 0;
     is_debug2 = 0;
-
     if (is_debug1) {
         cout << "init()..." << endl;
     }
@@ -203,12 +202,10 @@ MatPlot::~MatPlot()
 /// display //
 void MatPlot::display()
 {
-
     int is_done = 0;
     int mode_next = -1;
     while (!is_done) {
         if (mode == 0) { // Allocation of objects
-
             if (is_debug1) {
                 cout << "============================= allocation ..." << endl;
             }
