@@ -201,7 +201,6 @@ MatPlot::~MatPlot()
 // void MatPlot::virtual DISPLAY(){};
 
 /// display //
-
 void MatPlot::display()
 {
 
@@ -337,7 +336,6 @@ void MatPlot::display()
             }
         }
         if (mode == 2) { // display
-
             if (is_debug1) {
                 cout << "============================= display ..." << endl;
             }
@@ -363,6 +361,7 @@ void MatPlot::color(float r, float g, float b)
         // cl->Color[2]=b;
     }
 }
+
 /// coordinate transform
 
 // figure coordination
@@ -984,7 +983,6 @@ void MatPlot::display_layer2()
     r = 3;
 
     if (xPassive < 25) {
-
         glViewport(0, 0, (int)(window_w), (int)(window_h));
         glLoadIdentity();
         gluOrtho2D(0.0, (int)(window_w), (int)(window_h), 0);
@@ -1003,7 +1001,6 @@ void MatPlot::display_layer2()
             // glVertex2d(l+w ,h*j );
             // glEnd();
             if (vLayer[j].Visible == 1) { // [v]
-
                 glBegin(GL_LINE_STRIP);
                 glVertex2d(l + r, h * j + r);
                 glVertex2d(l + r, h * j + h - r);
@@ -1056,7 +1053,6 @@ void MatPlot::Layer_mouse(int button, int state, int x, int y)
     if (button == GLUT_LEFT_BUTTON && state == GLUT_DOWN) { // Left Click
         for (int j = 0; j < vLayer.size(); ++j) {
             if ((l < x) && (x < w) && (h * j < y) && (y < h * j + h)) {
-
                 // visibility
                 if (vLayer[j].Visible == 1) {
                     is = 0;
@@ -1270,7 +1266,6 @@ void MatPlot::display_axes_2d()
             glLineWidth(ca->LineWidth);
             gl2psLineWidth(ca->LineWidth);
             for (int i = 0; i < ca->XTick.size(); ++i) {
-
                 // cout <<"grid "<<gridlinestyle<<" "<<ca->XTick[i]<<endl;
 
                 if (gridlinestyle == 1) { // -
@@ -1553,7 +1548,6 @@ void MatPlot::display_axes_3d()
 /// events (mouse, motion)
 void MatPlot::Axes_mouse(int button, int state, int x, int y)
 {
-
     float X, Y;
     double rx, ry, mx, my; // mouse
     X = (float)x / window_w;
@@ -1571,7 +1565,6 @@ void MatPlot::Axes_mouse(int button, int state, int x, int y)
 
         // mouse capture axes //
         if (iAxesSelected >= 0) {
-
             ca = &vAxes[iAxesSelected];
             if (ca->Visible) {
                 l = ca->Position[0];
@@ -3866,7 +3859,6 @@ void MatPlot::display_patch_3d()
         }
         // Face
         if (cp->FaceColor != "none") {
-
             rgb = ColorSpec2RGB(cp->FaceColor);
             glColor3f(rgb[0], rgb[1], rgb[2]);
 
@@ -3987,7 +3979,6 @@ void MatPlot::Shading(string c) { shading(c); }
 
 void MatPlot::shading(string c)
 {
-
     int tObj = hObj % 100;
     int iObj = hObj / 100;
     if ((tObj == tSurface) && (iObj < vSurface.size())) {
